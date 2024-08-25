@@ -23,46 +23,24 @@ type HealthStats = {
 
 function healthTable(stats: HealthStats) {
   const table = document.createElement("table");
-  table.innerHTML = `
-    <table>
-        <tr>
-            <td>Status</td>
-            <td>${stats.status}</td>
-        </tr>
-        <tr>
-            <td>Open Connections</td>
-            <td>${stats.open_connections}</td>
-        </tr>
-        <tr>
-            <td>Idle</td>
-            <td>${stats.idle}</td>
-        </tr>
-        <tr>
-            <td>In Use</td>
-            <td>${stats.in_use}</td>
-        </tr>
-        <tr>
-            <td>Max Idle Closed</td>
-            <td>${stats.max_idle_closed}</td>
-        </tr>
-        <tr>
-            <td>Max Lifetime Closed</td>
-            <td>${stats.max_lifetime_closed}</td>
-        </tr>
-        <tr>
-            <td>Wait Count</td>
-            <td>${stats.wait_count}</td>
-        </tr>
-        <tr>
-            <td>Wait Duration</td>
-            <td>${stats.wait_duration}</td>
-        </tr>
-        <tr>
-            <td>Message</td>
-            <td>${stats.message}</td>
-        </tr>
-    </table>
-    `;
+
+  for (const [key, value] of Object.entries(stats)) {
+    const row = document.createElement("tr");
+    const keyCell = document.createElement("td");
+    keyCell.textContent = formatName(key);
+    const valueCell = document.createElement("td");
+    valueCell.textContent = value.toString();
+    row.appendChild(keyCell);
+    row.appendChild(valueCell);
+    table.appendChild(row);
+  }
 
   return table;
+}
+
+function formatName(name: string) {
+  return name
+    .split("_")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
