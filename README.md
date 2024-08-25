@@ -1,12 +1,21 @@
-# Project datastar-go
+# Vite Vanilla and Go
 
-One Paragraph of project description goes here
+This is the start of a template for a full stack application using Vite, Vanilla JS, and Go. The goal is to have a simple, fast, and easy to use template for building full stack applications.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Clone the repository
 
-## MakeFile
+```bash
+git clone git@github.com:kensonjohnson/vite-vanilla-and-go.git
+cd vite-vanilla-and-go
+```
+
+## Usage
+
+TBD
+
+<!-- ## MakeFile
 
 run all make commands with clean tests
 
@@ -54,4 +63,4 @@ clean up binary from the last build
 
 ```bash
 make clean
-```
+``` -->
