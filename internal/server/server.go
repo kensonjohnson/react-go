@@ -9,7 +9,7 @@ import (
 
 	_ "github.com/joho/godotenv/autoload"
 
-	"datastar-go/internal/database"
+	"vite-vanilla-and-go/internal/database"
 )
 
 type Server struct {

@@ -1,4 +1,4 @@
-module datastar-go
+module vite-vanilla-and-go
 
 go 1.23.0
 

@@ -1,10 +1,10 @@
 package tests
 
 import (
-	"datastar-go/internal/server"
 	"net/http"
 	"net/http/httptest"
 	"testing"
+	"vite-vanilla-and-go/internal/server"
 
 	"github.com/gin-gonic/gin"
 )
