@@ -1,4 +1,4 @@
-module react-go
+module datastar-go
 
 go 1.23.0
 

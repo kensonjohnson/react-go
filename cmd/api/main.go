@@ -1,8 +1,8 @@
 package main
 
 import (
+	"datastar-go/internal/server"
 	"fmt"
-	"react-go/internal/server"
 )
 
 func main() {

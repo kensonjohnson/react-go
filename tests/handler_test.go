@@ -1,11 +1,12 @@
 package tests
 
 import (
-	"github.com/gin-gonic/gin"
+	"datastar-go/internal/server"
 	"net/http"
 	"net/http/httptest"
-	"react-go/internal/server"
 	"testing"
+
+	"github.com/gin-gonic/gin"
 )
 
 func TestHelloWorldHandler(t *testing.T) {
