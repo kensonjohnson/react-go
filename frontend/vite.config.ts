@@ -13,4 +13,9 @@ export default defineConfig({
       input: globSync(resolve(cwd(), "src", "**/*.html")),
     },
   },
+  server: {
+    proxy: {
+      "/api": "http://localhost:8080",
+    },
+  },
 });
