@@ -7,11 +7,22 @@ import (
 )
 
 func (s *Server) RegisterRoutes() http.Handler {
-	r := gin.Default()
+	app := gin.Default()
 
-	r.GET("/health", s.healthHandler)
+	router := app.Group("/api")
 
-	return r
+	router.GET("/", s.HelloWorldHandler)
+
+	router.GET("/health", s.healthHandler)
+
+	return app
+}
+
+func (s *Server) HelloWorldHandler(c *gin.Context) {
+	resp := make(map[string]string)
+	resp["message"] = "Hello World"
+
+	c.JSON(http.StatusOK, resp)
 }
 
 func (s *Server) healthHandler(c *gin.Context) {
